@@ -24,9 +24,12 @@ int main() {
 
     for(int j = 0; j < v1.size(); j++)
     {
-        
+        int result = sum_ascii(v1[j]); 
+        total_max = total_max + result; 
     }
 
+    cout<<endl; 
+    cout<<total_max<<endl; //i ended up getting 69893419, success!
     
    
     return 0;
