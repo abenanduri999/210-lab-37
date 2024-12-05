@@ -24,5 +24,9 @@ E1D2665B21EA
 
 int sum_ascii(string s)
 {
-    
+    int total = 0; 
+    for(int i = 0; i < s.length(); i++)
+    {
+        total = total + (int)s[i]; 
+    }
 }
