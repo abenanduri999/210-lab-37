@@ -9,6 +9,8 @@ int main() {
     cout<<endl;
     cout<<sum_ascii("536B9DFC93AF")<<endl; 
     cout<<sum_ascii("1DA9D64D02A0")<<endl; 
+    cout<<sum_ascii("666D109AA22E")<<endl; 
+    cout<<sum_ascii("E1D2665B21EA")<<endl;
    /* char a = 'A';
     cout << a << endl;
     cout << (int) a << endl;
