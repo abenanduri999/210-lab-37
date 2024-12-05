@@ -5,12 +5,15 @@ using namespace std;
 int sum_ascii(string); 
 
 int main() {
-
+    
+    cout<<endl;
+    cout<<sum_ascii("536B9DFC93AF")<<endl; 
+    cout<<sum_ascii("1DA9D64D02A0")<<endl; 
    /* char a = 'A';
     cout << a << endl;
     cout << (int) a << endl;
     int b = 66;
-    cout << b << endl;
+    cout << b << endl;  
     cout << (char) b << endl;*/
     return 0;
 }
@@ -29,4 +32,6 @@ int sum_ascii(string s)
     {
         total = total + (int)s[i]; 
     }
+
+    return total; 
 }
