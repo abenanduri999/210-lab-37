@@ -11,7 +11,12 @@ int main() {
 
     vector<string> v1; 
     ifstream input("data.txt"); 
-
+    string data; 
+    while(getline(input, data))
+    {
+        v1.push_back(data); 
+    }
+    input.close(); 
     
    
     return 0;
