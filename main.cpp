@@ -27,10 +27,19 @@ int main() {
     for(int j = 0; j < 100; j++)
     {
       hi =  gen_hash_index(v1[j]); 
-        
-
+      hash_table[hi].push_back(v1[j]);  
     }
 
+    for(auto e: hash_table)
+    {
+        cout<<"Hash Index: "<<e.first<<" Values: ";
+            for(auto val: e.second)
+            {
+                cout<<val<<" ";
+            }
+
+        cout<<endl; 
+    }
    
     
    
