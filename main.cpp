@@ -2,6 +2,8 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <map>
+#include <list>
 
 using namespace std;
 
@@ -9,6 +11,8 @@ int sum_ascii(string);
 
 int main() {
 
+    map<int, list<string>> hash_table; 
+    
     vector<string> v1; 
     ifstream input("data.txt"); 
     string data; 
