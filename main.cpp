@@ -7,12 +7,12 @@
 
 using namespace std;
 
-int sum_ascii(string); 
+int gen_hash_index(string); 
 
 int main() {
 
     map<int, list<string>> hash_table; 
-    
+
     vector<string> v1; 
     ifstream input("data.txt"); 
     string data; 
@@ -22,18 +22,16 @@ int main() {
     }
     input.close(); 
 
-    int total_max = 0; 
+    int hi; 
 
-    int result = 0; 
-
-    for(int j = 0; j < v1.size(); j++)
+    for(int j = 0; j < 100; j++)
     {
-        int result = sum_ascii(v1[j]); 
-        total_max = total_max + result; 
+      hi =  gen_hash_index(v1[j]); 
+        
+
     }
 
-    cout<<endl; 
-    cout<<total_max<<endl; //i ended up getting 69893419, success!
+   
     
    
     return 0;
@@ -48,5 +46,7 @@ int sum_ascii(string s)
         total = total + (int)s[i]; 
     }
 
-    return total; 
+    int mod = total % 97; 
+
+    return mod; 
 }
