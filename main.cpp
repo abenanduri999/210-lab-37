@@ -47,8 +47,7 @@ int main() {
 }
 
 
-int gen_hash_index
-(string s)
+int gen_hash_index(string s)
 {
     int total = 0; 
     for(int i = 0; i < s.length(); i++)
