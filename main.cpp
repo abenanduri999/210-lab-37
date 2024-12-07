@@ -22,7 +22,7 @@ int main() {
     }
     input.close(); 
 
-    int hi; 
+    int hi = 0; 
 
     for(int j = 0; j < 100; j++)
     {
@@ -47,7 +47,7 @@ int main() {
 }
 
 
-int sum_ascii(string s)
+int gen_hash_index(string s)
 {
     int total = 0; 
     for(int i = 0; i < s.length(); i++)
