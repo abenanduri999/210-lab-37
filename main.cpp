@@ -42,6 +42,7 @@ int main() {
         cin>>choice; 
 
         string entry; 
+        int key; 
 
         switch(choice)
         {
@@ -60,11 +61,15 @@ int main() {
                 break; 
 
             case 2: 
-                cout<<"Enter key to search\n"; 
+                cout<<"Enter key to search(1-96)\n"; 
+                cin>>key; 
+                hash_table.erase(key); 
                 break; 
 
             case 3: 
                 cout<<"Type key to add: \n"; 
+                cin>>key; 
+                hash_table.insert(key, ); 
                 break; 
 
             case 4: 
