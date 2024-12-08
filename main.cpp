@@ -30,6 +30,27 @@ int main() {
       hash_table[hi].push_back(v1[j]);  
     }
 
+    int choice; 
+    do
+    {
+        cout<<"1) Print the first 100 entries\n"; 
+        cout<<"2) Search for a key\n"; 
+        cout<<"3) Add a key\n"; 
+        cout<<"4) Remove a key\n"; 
+        cout<<"5) Modify a key\n"; 
+        cout<<"6) Exit\n"; 
+
+        switch(choice)
+        {
+            case 1: 
+                cout<<"First 100 values: \n";
+        }
+        
+
+
+
+    }while(choice != 6); 
+
     for(auto e: hash_table)
     {
         cout<<"Hash Index: "<<e.first<<" Values: ";
