@@ -39,11 +39,24 @@ int main() {
         cout<<"4) Remove a key\n"; 
         cout<<"5) Modify a key\n"; 
         cout<<"6) Exit\n"; 
+        cin>>choice; 
+
+        string entry; 
 
         switch(choice)
         {
             case 1: 
-                cout<<"First 100 values: \n";
+                cout<<"First 100 values are: \n";
+                for(auto e: hash_table)
+                {
+                    cout<<"Hash Index: "<<e.first<<" Values: ";
+                    for(auto val: e.second)
+                    {
+                        cout<<val<<" ";
+                    }
+
+                    cout<<endl; 
+                }
                 break; 
 
             case 2: 
@@ -72,16 +85,7 @@ int main() {
 
     }while(choice != 6); 
 
-    for(auto e: hash_table)
-    {
-        cout<<"Hash Index: "<<e.first<<" Values: ";
-            for(auto val: e.second)
-            {
-                cout<<val<<" ";
-            }
-
-        cout<<endl; 
-    }
+    
    
     
    
