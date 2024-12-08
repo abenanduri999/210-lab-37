@@ -63,7 +63,12 @@ int main() {
             case 2: 
                 cout<<"Enter key to search(1-96)\n"; 
                 cin>>key; 
-                hash_table.erase(key); 
+                if(hash_table.find(key) != hash_table.end())
+                {
+                    cout<<"Key "<<key<<" found!"<<endl; 
+                } 
+                else    
+                    cout<<"Key "<<key<<" not found."<<endl; 
                 break; 
 
             case 3: 
@@ -74,6 +79,8 @@ int main() {
 
             case 4: 
                 cout<<"Type key to remove: \n";
+                cin>>key; 
+                hash_table.erase(key);
                 break;
             
             case 5: 
