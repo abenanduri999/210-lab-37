@@ -8,7 +8,11 @@
 using namespace std;
 
 int gen_hash_index(string); 
-void search_key(map<int, list<string>> &h_table); 
+void print_key(map<int, list<string>> &hash_table); 
+void search_key(map<int, list<string>> &hash_table); 
+void add_key(map<int, list<string>> &hash_table); 
+void remove_key(map<int, list<string>> &hash_table);
+void modify_key(map<int, list<string>> &hash_table);
 
 int main() {
 
@@ -50,17 +54,7 @@ int main() {
         switch(choice)
         {
             case 1: 
-                cout<<"First 100 values are: \n";
-                for(auto e: hash_table)
-                {
-                    cout<<"Hash Index: "<<e.first<<" Values: ";
-                    for(auto val: e.second)
-                    {
-                        cout<<val<<" ";
-                    }
-
-                    cout<<endl; 
-                }
+                print_key(hash_table); 
                 break; 
 
             case 2: 
@@ -68,11 +62,7 @@ int main() {
                 break; 
 
             case 3: 
-                cout<<"Type key to add: \n"; 
-                cin>>key; 
-                cout<<"Enter value to be added: \n";
-                getline(cin, entry);
-                hash_table[key].push_back(entry); 
+                add_key(hash_table); 
                 break; 
 
             case 4: 
@@ -116,6 +106,22 @@ int gen_hash_index(string s)
     return mod; 
 }
 
+void print_key(map<int, list<string>> &hash_table)
+{
+    cout<<"First 100 values are: \n";
+    for(auto e: hash_table)
+    {
+        cout<<"Hash Index: "<<e.first<<" Values: ";
+        for(auto val: e.second)
+        {
+            cout<<val<<" ";
+        }
+
+        cout<<endl; 
+    }
+
+}
+
 void search_key(map<int, list<string>> &hash_table)
 {
      int key; 
@@ -135,3 +141,36 @@ void search_key(map<int, list<string>> &hash_table)
      else    
         cout<<"Key "<<key<<" not found."<<endl;
 } 
+
+void add_key(map<int, list<string>> &hash_table)
+{
+    int key; 
+    string entry;
+    
+    cout<<"Type key to add: \n"; 
+    cin>>key; 
+    cin.ignore();
+    
+    cout<<"Enter value to be added: \n";
+    getline(cin, entry);
+    
+    hash_table[key].push_back(entry); 
+    
+    cout<<"New key added"<<endl;
+    auto it = hash_table.find(key); 
+    if(it != hash_table.end())
+     {
+        cout<<"New Key: "<<key<<" Values: ";
+        for(auto value : it->second)
+        {
+            cout<<value<<" ";
+        }
+        cout<<endl;
+    }   
+
+}
+
+void remove_key(map<int, list<string>> &hash_table)
+{
+
+}

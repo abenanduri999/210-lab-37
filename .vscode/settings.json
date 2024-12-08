@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "map": "cpp",
+        "list": "cpp"
     }
 }
