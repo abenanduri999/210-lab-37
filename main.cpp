@@ -34,6 +34,7 @@ int main() {
       hi =  gen_hash_index(v1[j]); 
       hash_table[hi].push_back(v1[j]);  
     }
+    cout<<endl; 
 
     int choice; 
     do
@@ -81,12 +82,8 @@ int main() {
     }while(choice != 6); 
 
     
-   
-    
-   
     return 0;
 }
-
 
 int gen_hash_index(string s)
 {
