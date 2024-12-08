@@ -66,7 +66,7 @@ int main() {
                 break; 
 
             case 4: 
-                
+                remove_key(hash_table); 
                 break;
             
             case 5: 
@@ -183,4 +183,18 @@ void remove_key(map<int, list<string>> &hash_table)
     else    
         cout<<"Key not found"<<endl; 
 
+}
+
+void modify_key(map<int, list<string>> &hash_table)
+{
+    int key;
+    cout<<"Enter a key to modify: \n"; 
+    cin>>key; 
+    cin.ignore(); 
+    
+    auto it = hash_table.find(key); 
+    if(it != hash_table.end())
+    {
+        
+    }
 }
