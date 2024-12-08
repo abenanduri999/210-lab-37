@@ -70,7 +70,7 @@ int main() {
                 break;
             
             case 5: 
-                cout<<"Type in key to modify: \n"; 
+                modify_key(hash_table); 
                 break; 
             
             case 6: 
@@ -78,9 +78,6 @@ int main() {
                 break; 
         }
         
-
-
-
     }while(choice != 6); 
 
     
@@ -188,6 +185,7 @@ void remove_key(map<int, list<string>> &hash_table)
 void modify_key(map<int, list<string>> &hash_table)
 {
     int key;
+    string entry;
     cout<<"Enter a key to modify: \n"; 
     cin>>key; 
     cin.ignore(); 
@@ -195,6 +193,12 @@ void modify_key(map<int, list<string>> &hash_table)
     auto it = hash_table.find(key); 
     if(it != hash_table.end())
     {
-        
+        cout<<"Enter a new value to add to key: \n"; 
+        getline(cin, entry); 
+
+        it->second.push_back(entry);
     }
+
+    else
+        cout<<"Key not found"<<endl; 
 }
