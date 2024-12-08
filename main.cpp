@@ -43,6 +43,7 @@ int main() {
 
         string entry; 
         int key; 
+        
 
         switch(choice)
         {
@@ -81,7 +82,9 @@ int main() {
             case 3: 
                 cout<<"Type key to add: \n"; 
                 cin>>key; 
-                hash_table.insert(key, ); 
+                cout<<"Enter value to be added: \n";
+                getline(cin, entry);
+                //hash_table.insert(key, ); 
                 break; 
 
             case 4: 
