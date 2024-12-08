@@ -44,6 +44,27 @@ int main() {
         {
             case 1: 
                 cout<<"First 100 values: \n";
+                break; 
+
+            case 2: 
+                cout<<"Enter key to search\n"; 
+                break; 
+
+            case 3: 
+                cout<<"Type key to add: \n"; 
+                break; 
+
+            case 4: 
+                cout<<"Type key to remove: \n";
+                break;
+            
+            case 5: 
+                cout<<"Type in key to modify: \n"; 
+                break; 
+            
+            case 6: 
+                cout<<"Goodbye!\n";  
+                break; 
         }
         
 
