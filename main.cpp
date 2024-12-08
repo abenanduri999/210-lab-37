@@ -8,6 +8,7 @@
 using namespace std;
 
 int gen_hash_index(string); 
+void search_key(map<int, list<string>> &h_table); 
 
 int main() {
 
@@ -40,6 +41,7 @@ int main() {
         cout<<"5) Modify a key\n"; 
         cout<<"6) Exit\n"; 
         cin>>choice; 
+        cin.ignore(); 
 
         string entry; 
         int key; 
@@ -62,21 +64,7 @@ int main() {
                 break; 
 
             case 2: 
-                cout<<"Enter key to search(1-96)\n"; 
-                cin>>key; 
-                auto it = hash_table.find(key); 
-                if(it != hash_table.end())
-                {
-                    cout<<"Key "<<key<<" found!"<<endl; 
-                    cout<<"Hash Index: "<<key<<" Values: ";
-                        for(auto value : it->second)
-                        {
-                            cout<<value<<" ";
-                        }
-                    cout<<endl;
-                }   
-                else    
-                    cout<<"Key "<<key<<" not found."<<endl; 
+                search_key(hash_table); 
                 break; 
 
             case 3: 
@@ -84,7 +72,7 @@ int main() {
                 cin>>key; 
                 cout<<"Enter value to be added: \n";
                 getline(cin, entry);
-                //hash_table.insert(key, ); 
+                hash_table[key].push_back(entry); 
                 break; 
 
             case 4: 
@@ -127,3 +115,23 @@ int gen_hash_index(string s)
 
     return mod; 
 }
+
+void search_key(map<int, list<string>> &hash_table)
+{
+     int key; 
+     cout<<"Enter key to search(1-96)\n"; 
+     cin>>key; 
+     auto it = hash_table.find(key); 
+     if(it != hash_table.end())
+     {
+        cout<<"Key "<<key<<" found!"<<endl; 
+        cout<<"Hash Index: "<<key<<" Values: ";
+        for(auto value : it->second)
+        {
+            cout<<value<<" ";
+        }
+        cout<<endl;
+    }   
+     else    
+        cout<<"Key "<<key<<" not found."<<endl;
+} 
