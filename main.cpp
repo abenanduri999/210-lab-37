@@ -63,10 +63,17 @@ int main() {
             case 2: 
                 cout<<"Enter key to search(1-96)\n"; 
                 cin>>key; 
-                if(hash_table.find(key) != hash_table.end())
+                auto it = hash_table.find(key); 
+                if(it != hash_table.end())
                 {
                     cout<<"Key "<<key<<" found!"<<endl; 
-                } 
+                    cout<<"Hash Index: "<<key<<" Values: ";
+                        for(auto value : it->second)
+                        {
+                            cout<<value<<" ";
+                        }
+                    cout<<endl;
+                }   
                 else    
                     cout<<"Key "<<key<<" not found."<<endl; 
                 break; 
