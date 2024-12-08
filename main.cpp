@@ -66,9 +66,7 @@ int main() {
                 break; 
 
             case 4: 
-                cout<<"Type key to remove: \n";
-                cin>>key; 
-                hash_table.erase(key);
+                
                 break;
             
             case 5: 
@@ -171,6 +169,18 @@ void add_key(map<int, list<string>> &hash_table)
 }
 
 void remove_key(map<int, list<string>> &hash_table)
-{
+{   
+    int key; 
+    cout<<"Type key to remove: \n";
+    cin>>key;
+
+    auto it = hash_table.find(key); 
+    if(it != hash_table.end())
+    {
+        hash_table.erase(key);
+        cout<<"Key removed"<<endl; 
+    }
+    else    
+        cout<<"Key not found"<<endl; 
 
 }
